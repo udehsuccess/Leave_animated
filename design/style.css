@@ -1,0 +1,39 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+}
+
+.link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: #fff;
+    font-size: 50px;
+    padding: 0 10px;
+}
+
+.link::before, .link::after{
+    content: '';
+    background: red;
+    width: 0;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    transition: width 0.2s;
+}
+
+.link::before{
+    right: 100%;
+}
+
+.link::after{
+    left: 100%;
+}
+
+.link:hover::before, .link:hover::after{
+    width: 50%;
+}
